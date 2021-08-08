@@ -1,12 +1,8 @@
 all:
 #	service
 	rm -rf ebin/*;
-#	interfaces
-	erlc -I ../../interfaces -o ebin ../../interfaces/*.erl;
 #	iaas
 	erlc -I ../../interfaces -o ebin ../../kube_iaas/src/*.erl;
-#	node
-	erlc -I ../../interfaces -o ebin ../../support/src/*.erl;
 #	application
 	cp src/*.app ebin;
 	erlc -o ebin src/*.erl;
